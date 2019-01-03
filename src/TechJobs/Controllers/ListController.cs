@@ -4,6 +4,7 @@ using TechJobs.Data;
 using TechJobs.ViewModels;
 using System.Linq;
 using System.Collections.Generic;
+using System;
 
 namespace TechJobs.Controllers
 {
@@ -25,6 +26,11 @@ namespace TechJobs.Controllers
             jobFieldsViewModel.Title = "View Job Fields";
 
             return View(jobFieldsViewModel);
+        }
+
+        public static explicit operator ListController(Job v)
+        {
+            throw new NotImplementedException();
         }
 
         // Lists the values of a given column, or all jobs if selected

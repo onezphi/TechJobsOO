@@ -1,4 +1,7 @@
-﻿namespace TechJobs.Models
+﻿using System;
+using System.Collections.Generic;
+
+namespace TechJobs.Models
 {
     public class Job
     {
@@ -17,5 +20,9 @@
             nextId++;
         }
 
+        public static implicit operator List<object>(Job v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
